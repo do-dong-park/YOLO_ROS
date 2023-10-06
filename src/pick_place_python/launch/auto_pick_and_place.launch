@@ -1,0 +1,6 @@
+<launch>
+    <arg name="robot_name" default="/" />
+    <arg name="start_delay_seconds" default="3" />
+    <node name="yolov5_ros" pkg="yolov5_ros" type="detect.py" ns="$(arg robot_name)" output="screen" launch-prefix="bash -c 'sleep $(arg start_delay_seconds); $0 $@' " />
+    <node name="yolo_pick_place" pkg="pick_place_python" type="yolo_pick_and_place.py" ns="$(arg robot_name)" output="screen" launch-prefix="bash -c 'sleep $(arg start_delay_seconds); $0 $@' " />
+</launch>
