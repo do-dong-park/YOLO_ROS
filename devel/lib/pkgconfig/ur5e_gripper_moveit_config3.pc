@@ -1,0 +1,8 @@
+prefix=/home/ur5e/pdk_ws/devel
+
+Name: ur5e_gripper_moveit_config3
+Description: Description of ur5e_gripper_moveit_config3
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
